@@ -1,0 +1,46 @@
+/* ============================================================
+   NICK JULES — sharknet-case-study.css
+   Based on Olivia case study styling
+   ============================================================ */
+
+/* Use the same case study system as Olivia */
+@import url("olivia-case-study.css");
+
+/* SharkNet-only image tuning */
+.sharknet-mockup {
+  width: 760px;
+  max-width: none;
+  margin-left: -210px;
+  margin-top: -55px;
+  border-radius: 18px;
+  filter: drop-shadow(0 30px 70px rgba(0,0,0,0.6))
+          drop-shadow(0 0 45px rgba(124,92,252,0.25));
+}
+
+/* Make the hero stat fit text instead of a number */
+.sharknet-result {
+  font-size: 2.4rem;
+}
+
+/* Better fit for SharkNet gallery screenshots */
+.cs-gallery-item img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* The mockup image is wide, so give the hero a little breathing room */
+@media (max-width: 900px) {
+  .sharknet-mockup {
+    width: 100%;
+    max-width: 620px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .sharknet-mockup {
+    width: 100%;
+    max-width: 100%;
+  }
+}

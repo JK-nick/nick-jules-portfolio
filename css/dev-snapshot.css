@@ -1,0 +1,364 @@
+/* ============================================================
+   NICK JULES — dev-snapshot.css
+   Shared styles for Development Snapshot pages (Build Foundry, Pathway)
+   Imports olivia-case-study.css for base structure.
+   ============================================================ */
+
+/* ── Dev Status Tag ── */
+.dev-tag {
+  background: rgba(124,92,252,0.12) !important;
+  border: 1px solid rgba(124,92,252,0.35) !important;
+  color: #b07fff !important;
+  font-size: 0.7rem !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.pathway-dev-tag {
+  background: rgba(59,130,246,0.12) !important;
+  border: 1px solid rgba(59,130,246,0.35) !important;
+  color: #7db8f7 !important;
+}
+
+/* ── Locked Button ── */
+.btn-locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-locked--blue {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4) !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO MOCKUP — LOCKED PREVIEW
+══════════════════════════════════════════════════════════ */
+.snap-mockup-wrap {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snap-locked-preview {
+  position: relative;
+  width: min(100%, 580px);
+  height: 340px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(124,92,252,0.3);
+  box-shadow:
+    0 0 60px rgba(124,92,252,0.2),
+    0 30px 90px rgba(0,0,0,0.6);
+  transform: rotateY(-8deg) rotateX(3deg);
+}
+
+.snap-locked-preview--pathway {
+  border-color: rgba(59,130,246,0.3);
+  box-shadow:
+    0 0 60px rgba(59,130,246,0.2),
+    0 30px 90px rgba(0,0,0,0.6);
+}
+
+/* Blurred background fills */
+.snap-blur-img {
+  position: absolute;
+  inset: 0;
+  filter: blur(18px) brightness(0.45);
+  transform: scale(1.08);
+  background-size: cover;
+  background-position: center;
+}
+
+.snap-blur-img--bf {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(124,92,252,0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(160,125,255,0.4) 0%, transparent 55%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 28px),
+    #0d0b1a;
+}
+
+.snap-blur-img--pathway {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(59,130,246,0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(6,182,212,0.4) 0%, transparent 55%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 28px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 28px),
+    #060d1a;
+}
+
+/* Lock overlay */
+.snap-lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(7,6,15,0.45);
+  backdrop-filter: blur(2px);
+}
+
+.snap-lock-overlay svg {
+  width: 36px;
+  height: 36px;
+  color: rgba(160,125,255,0.8);
+}
+
+.snap-lock-overlay span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200,180,255,0.65);
+}
+
+.snap-lock-overlay--blue svg  { color: rgba(100,180,255,0.8); }
+.snap-lock-overlay--blue span { color: rgba(150,210,255,0.65); }
+
+/* Float stat */
+.snap-float-stat {
+  top: -8%;
+  left: -4%;
+}
+
+.snap-float-stat--blue .cs-float-num { color: #7db8f7; }
+
+/* ══════════════════════════════════════════════════════════
+   SCREENSHOT FRAME — LOCKED
+══════════════════════════════════════════════════════════ */
+.snap-frame-locked {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.snap-frame-blur {
+  position: absolute;
+  inset: 0;
+  filter: blur(14px) brightness(0.4);
+  transform: scale(1.06);
+  background-size: cover;
+}
+
+.snap-fb--pathway {
+  background:
+    radial-gradient(ellipse at 40% 50%, rgba(59,130,246,0.55) 0%, transparent 65%),
+    radial-gradient(ellipse at 75% 30%, rgba(6,182,212,0.35) 0%, transparent 55%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 24px),
+    #060d1a;
+}
+
+.snap-frame-lock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(7,6,15,0.5);
+}
+
+.snap-frame-lock svg {
+  width: 28px;
+  height: 28px;
+  color: rgba(100,180,255,0.7);
+}
+
+.snap-frame-lock span {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(150,210,255,0.6);
+}
+
+/* ══════════════════════════════════════════════════════════
+   MODULE PROGRESS
+══════════════════════════════════════════════════════════ */
+.snap-module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.snap-module-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.2s;
+}
+
+.snap-module-item:hover { border-color: var(--border2); }
+
+.snap-module-item--blue:hover { border-color: rgba(59,130,246,0.3); }
+
+.snap-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.snap-module-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.snap-module-pct {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent2);
+}
+
+.snap-module-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.55rem;
+}
+
+.snap-module-bar--blue { background: rgba(59,130,246,0.08); }
+
+.snap-module-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #7c5cfc, #a07dff);
+  transition: width 1s ease;
+}
+
+.snap-module-fill--blue {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
+.snap-module-fill--planned {
+  background: rgba(255,255,255,0.12);
+}
+
+.snap-module-status {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.snap-status--active  { color: #7c5cfc; }
+.snap-status--blue    { color: #60a5fa; }
+.snap-status--progress { color: var(--text3); }
+.snap-status--planned  { color: var(--text3); opacity: 0.6; }
+
+/* ══════════════════════════════════════════════════════════
+   GALLERY — LOCKED ITEMS
+══════════════════════════════════════════════════════════ */
+.snap-gallery-item {
+  flex-shrink: 0;
+  width: 230px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  scroll-snap-align: start;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.snap-gallery-item:hover {
+  border-color: var(--border2);
+  transform: translateY(-3px);
+}
+
+.snap-gallery-locked {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+}
+
+.snap-gallery-blur {
+  position: absolute;
+  inset: 0;
+  filter: blur(12px) brightness(0.38);
+  transform: scale(1.1);
+  background-size: cover;
+}
+
+/* Build Foundry blurs — purple palette variations */
+.snap-gb--1 { background: radial-gradient(ellipse at 35% 45%, rgba(124,92,252,0.8) 0%, rgba(80,40,180,0.4) 50%, #0d0b1a 100%); }
+.snap-gb--2 { background: radial-gradient(ellipse at 60% 35%, rgba(160,125,255,0.75) 0%, rgba(100,60,200,0.4) 55%, #0d0b1a 100%); }
+.snap-gb--3 { background: radial-gradient(ellipse at 25% 60%, rgba(100,60,220,0.8) 0%, rgba(140,90,255,0.35) 50%, #0d0b1a 100%); }
+.snap-gb--4 { background: radial-gradient(ellipse at 70% 50%, rgba(180,140,255,0.7) 0%, rgba(90,50,180,0.4) 55%, #0d0b1a 100%); }
+.snap-gb--5 { background: radial-gradient(ellipse at 45% 30%, rgba(140,80,255,0.75) 0%, rgba(60,30,150,0.4) 60%, #0d0b1a 100%); }
+
+/* Pathway blurs — blue palette variations */
+.snap-gb--p1 { background: radial-gradient(ellipse at 35% 45%, rgba(59,130,246,0.8) 0%, rgba(30,80,180,0.4) 50%, #060d1a 100%); }
+.snap-gb--p2 { background: radial-gradient(ellipse at 60% 35%, rgba(6,182,212,0.75) 0%, rgba(20,120,160,0.4) 55%, #060d1a 100%); }
+.snap-gb--p3 { background: radial-gradient(ellipse at 25% 60%, rgba(99,162,255,0.8) 0%, rgba(40,100,200,0.35) 50%, #060d1a 100%); }
+.snap-gb--p4 { background: radial-gradient(ellipse at 70% 50%, rgba(56,189,248,0.7) 0%, rgba(20,100,180,0.4) 55%, #060d1a 100%); }
+.snap-gb--p5 { background: radial-gradient(ellipse at 45% 30%, rgba(100,180,255,0.75) 0%, rgba(30,80,160,0.4) 60%, #060d1a 100%); }
+
+.snap-gallery-lock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7,6,15,0.5);
+}
+
+.snap-gallery-lock svg {
+  width: 20px;
+  height: 20px;
+  color: rgba(160,125,255,0.7);
+}
+
+.snap-gallery-lock--blue svg { color: rgba(100,180,255,0.7); }
+
+/* ══════════════════════════════════════════════════════════
+   DEV NOTES CARD
+══════════════════════════════════════════════════════════ */
+.snap-dev-card {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.snap-dev-card--blue {
+  border-color: rgba(59,130,246,0.25);
+  box-shadow: 0 8px 40px rgba(59,130,246,0.08);
+}
+
+.snap-results-num--blue { color: #7db8f7; }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .snap-locked-preview {
+    transform: none;
+    width: 100%;
+    height: 260px;
+  }
+
+  .snap-mockup-wrap {
+    height: auto;
+  }
+
+  .snap-module-grid {
+    grid-template-columns: 1fr;
+  }
+}

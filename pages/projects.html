@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Nick Jules</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+  <!-- Ambient background orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════
+       NAV
+  ══════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">NICK JULES</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html" class="nav-active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../assets/Nick_Jules_Resume.docx" class="nav-cta">Download Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       PROJECTS HERO
+  ══════════════════════════════════ -->
+  <section id="projects-hero">
+    <div class="projects-hero-inner">
+
+      <!-- Left: copy -->
+      <div class="ph-left reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">My Work</p>
+        <h1 class="ph-title">Projects that <span class="accent">ship.</span></h1>
+        <p class="ph-sub">A collection of web platforms, branding systems, and digital experiences built with purpose and precision.</p>
+      </div>
+
+      <!-- Right: decorative mock window -->
+      <div class="ph-right reveal reveal-delay-1" aria-hidden="true">
+        <div class="ph-mock">
+          <div class="ph-mock-bar">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <div class="ph-mock-code">
+            <span class="code-line"><span class="c-purple">const</span> <span class="c-white">projects</span> <span class="c-text2">=</span> <span class="c-text2">[</span></span>
+            <span class="code-line indent"><span class="c-text2">{</span> <span class="c-accent">name</span><span class="c-text2">:</span> <span class="c-green">"The Olivia Experience"</span> <span class="c-text2">},</span></span>
+            <span class="code-line indent"><span class="c-text2">{</span> <span class="c-accent">name</span><span class="c-text2">:</span> <span class="c-green">"SharkNet"</span> <span class="c-text2">},</span></span>
+            <span class="code-line indent"><span class="c-text2">{</span> <span class="c-accent">name</span><span class="c-text2">:</span> <span class="c-green">"Build Foundry"</span> <span class="c-text2">},</span></span>
+            <span class="code-line indent"><span class="c-text2">{</span> <span class="c-accent">name</span><span class="c-text2">:</span> <span class="c-green">"Pathway"</span> <span class="c-text2">},</span></span>
+            <span class="code-line indent"><span class="c-text2">{</span> <span class="c-accent">name</span><span class="c-text2">:</span> <span class="c-green">"The Jules House"</span> <span class="c-text2">},</span></span>
+            <span class="code-line"><span class="c-text2">];</span></span>
+            <span class="code-line">&nbsp;</span>
+            <span class="code-line"><span class="c-purple">export default</span> <span class="c-white">projects</span><span class="c-text2">;</span> <span class="c-cursor">▋</span></span>
+          </div>
+          <!-- decorative graph line -->
+          <div class="ph-mock-graph">
+            <svg viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="gline" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#a07dff" stop-opacity="1"/>
+                </linearGradient>
+                <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 70 C40 68 60 55 90 40 C120 25 140 30 170 18 C200 6 230 20 260 10 C280 4 300 8 320 2" stroke="url(#gline)" stroke-width="2" fill="none"/>
+              <path d="M0 70 C40 68 60 55 90 40 C120 25 140 30 170 18 C200 6 230 20 260 10 C280 4 300 8 320 2 L320 80 L0 80 Z" fill="url(#gfill)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FILTER BAR
+  ══════════════════════════════════ -->
+  <div class="filter-bar-wrap">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="operations">Operations</button>
+      <button class="filter-btn" data-filter="client">Client Work</button>
+      <button class="filter-btn" data-filter="experimental">Experimental</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PROJECTS GRID
+  ══════════════════════════════════ -->
+  <section id="projects-grid-section">
+    <div class="pg-inner">
+
+      <!-- ── LARGE CARD: The Olivia Experience ── -->
+      <div class="pg-card pg-card--large reveal" data-categories="web client">
+        <div class="pg-card-img">
+          <img src="../assets/images/Logo.jpg" alt="The Olivia Experience">
+          <div class="pg-card-img-overlay"></div>
+          <div class="pg-card-img-content">
+            <div style="background:rgba(7,6,15,0.7); backdrop-filter:blur(8px); border-radius:12px; padding:1rem 1.25rem; max-width:280px; border:1px solid rgba(255,255,255,0.08);">
+              <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; color:#a07dff; margin-bottom:0.4rem;">BOOKING SITE</div>
+              <div style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; line-height:1.3;">Luxury Hair Booking<br>Made Simple</div>
+            </div>
+          </div>
+        </div>
+        <div class="pg-card-body">
+          <div class="pg-card-meta">
+            <span class="pg-status pg-status--live">
+              <span class="status-dot"></span> Live
+            </span>
+            <span class="pg-card-year">2024</span>
+          </div>
+          <h2 class="pg-card-title">The Olivia Experience</h2>
+          <p class="pg-card-desc">Luxury hair booking platform with online scheduling, payment processing, and client management. Increased bookings by +45% within the first month of launch.</p>
+          <div class="pg-card-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Booking System</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Live</span>
+          </div>
+          <div class="pg-card-actions">
+            <a href="olivia-case-study.html" class="btn btn-ghost btn-sm">View Case Study →</a>
+            <a href="https://oliviaexperience.com/" target="_blank" class="pg-external-link" title="Open Live Site">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><path d="M10 2h4v4"/><path d="M14 2L8 8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── LARGE CARD: SharkNet ── -->
+      <div class="pg-card pg-card--large reveal reveal-delay-1" data-categories="web">
+        <div class="pg-card-img pg-card-img--sharknet">
+          <img src="../assets/images/SharkNet.png" alt="SharkNet">
+          <div class="pg-card-img-overlay"></div>
+          <div class="pg-card-img-content">
+            <div style="background:rgba(7,6,15,0.7); backdrop-filter:blur(8px); border-radius:12px; padding:1rem 1.25rem; max-width:320px; border:1px solid rgba(255,255,255,0.08);">
+              <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#fff; margin-bottom:0.5rem;">SharkNet</div>
+              <div style="font-size:0.82rem; color:var(--text2); margin-bottom:0.75rem;">Connect with fellow NSU students to ask questions, share knowledge, and find tutors.</div>
+              <div style="display:flex; gap:0.5rem; align-items:center;">
+                <div style="flex:1; background:rgba(255,255,255,0.08); border-radius:6px; padding:0.4rem 0.7rem; font-size:0.75rem; color:var(--text3);">Search questions or topics...</div>
+                <div style="background:var(--accent); color:#fff; border-radius:6px; padding:0.4rem 0.85rem; font-size:0.75rem; font-weight:600;">Search</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pg-card-body">
+          <div class="pg-card-meta">
+            <span class="pg-status pg-status--live">
+              <span class="status-dot"></span> Live
+            </span>
+            <span class="pg-card-year">2025</span>
+          </div>
+          <h2 class="pg-card-title">SharkNet</h2>
+          <p class="pg-card-desc">Student Q&A and tutoring platform built for NSU students to collaborate and learn. Full deployment on Render with backend integration.</p>
+          <div class="pg-card-tags">
+            <span class="tag">Full Stack</span>
+            <span class="tag">Team Project</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Database</span>
+            <span class="tag">Flask</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <div class="pg-card-actions">
+            <a href="sharknet-case-study.html" class="btn btn-ghost btn-sm">View Case Study →</a>
+            <a href="https://sharknet.onrender.com/" target="_blank" class="pg-external-link" title="Open Live Site">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><path d="M10 2h4v4"/><path d="M14 2L8 8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SMALL CARD: Pathway ── -->
+      <div class="pg-card pg-card--small reveal" data-categories="web experimental">
+        <div class="pg-card-img pg-card-img--pathway">
+          <div class="pg-card-img-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+            <div style="background:rgba(7,6,15,0.65);backdrop-filter:blur(12px);border-radius:14px;padding:1.25rem;width:100%;border:1px solid rgba(80,180,255,0.18);">
+              <!-- Header row -->
+              <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.9rem;">
+                <div style="width:28px;height:28px;background:linear-gradient(135deg,#3b82f6,#06b6d4);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2L3 6v7h3v-4h4v4h3V6L8 2z"/></svg>
+                </div>
+                <span style="font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:#fff;">Pathway</span>
+                <span style="margin-left:auto;font-size:0.62rem;font-weight:600;letter-spacing:0.07em;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);color:#7db8f7;border-radius:50px;padding:0.15rem 0.55rem;">Year 1 of 4</span>
+              </div>
+              <!-- Semester pills -->
+              <div style="display:flex;gap:0.4rem;margin-bottom:0.7rem;">
+                <div style="flex:1;background:rgba(59,130,246,0.18);border:1px solid rgba(59,130,246,0.3);border-radius:6px;padding:0.35rem 0.5rem;font-size:0.62rem;color:#93c5fd;text-align:center;">Fall</div>
+                <div style="flex:1;background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2);border-radius:6px;padding:0.35rem 0.5rem;font-size:0.62rem;color:#67e8f9;text-align:center;">Spring</div>
+              </div>
+              <!-- AI chat bubble -->
+              <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.45rem 0.65rem;display:flex;align-items:flex-start;gap:0.45rem;">
+                <div style="width:14px;height:14px;background:linear-gradient(135deg,#3b82f6,#06b6d4);border-radius:50%;flex-shrink:0;margin-top:1px;"></div>
+                <span style="font-size:0.62rem;color:var(--text2);line-height:1.5;">"You're on track — 3 credits left for your core."</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pg-card-body">
+          <div class="pg-card-meta">
+            <span class="pg-status pg-status--dev">
+              <span class="status-dot status-dot--amber"></span> In Development
+            </span>
+          </div>
+          <h2 class="pg-card-title">Pathway</h2>
+          <p class="pg-card-desc">AI-powered college advisor that generates a personalized 4-year plan from your institution's courses and major — with a built-in advisor you can actually talk to.</p>
+          <div class="pg-card-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">AI</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="pg-card-actions">
+            <a href="pathway-case-study.html" class="btn btn-ghost btn-sm">View Case Study →</a>
+            <span class="pg-external-link pg-external-link--locked" title="Not yet available">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="8" rx="1.5"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SMALL CARD: Build Foundry ── -->
+      <div class="pg-card pg-card--small reveal reveal-delay-1" data-categories="web operations experimental">
+        <div class="pg-card-img pg-card-img--bf">
+          <img src="../assets/images/BF.jpg" alt="Build Foundry" style="mix-blend-mode:luminosity;opacity:0.7;">
+          <div class="pg-card-img-overlay"></div>
+        </div>
+        <div class="pg-card-body">
+          <div class="pg-card-meta">
+            <span class="pg-status pg-status--dev">
+              <span class="status-dot status-dot--amber"></span> In Development
+            </span>
+          </div>
+          <h2 class="pg-card-title">Build Foundry</h2>
+          <p class="pg-card-desc">Digital operations hub offering web development, branding, and support services.</p>
+          <div class="pg-card-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Tailwind</span>
+          </div>
+          <div class="pg-card-actions">
+            <a href="buildfoundry-case-study.html" class="btn btn-ghost btn-sm">View Case Study →</a>
+            <span class="pg-external-link pg-external-link--locked" title="Not yet available">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="8" rx="1.5"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SMALL CARD: The Jules House ── -->
+      <div class="pg-card pg-card--small reveal reveal-delay-2" data-categories="web client">
+        <div class="pg-card-img">
+          <img src="../assets/images/Jules.png" alt="The Jules House" style="object-position:top;">
+          <div class="pg-card-img-overlay"></div>
+          <div class="pg-card-img-content" style="bottom:auto;top:1rem;left:1rem;">
+            <div style="background:rgba(7,6,15,0.75); backdrop-filter:blur(8px); border-radius:8px; padding:0.5rem 0.85rem; border:1px solid rgba(255,255,255,0.08);">
+              <span style="font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;">The Jules Family</span>
+            </div>
+          </div>
+        </div>
+        <div class="pg-card-body">
+          <div class="pg-card-meta">
+            <span class="pg-status pg-status--live">
+              <span class="status-dot"></span> Live
+            </span>
+          </div>
+          <h2 class="pg-card-title">The Jules House</h2>
+          <p class="pg-card-desc">A personal digital archive and scrapbook built as a gift for my family.</p>
+          <div class="pg-card-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Custom Design</span>
+            <span class="tag">Netlify</span>
+          </div>
+          <div class="pg-card-actions">
+            <a href="jules-house-case-study.html" class="btn btn-ghost btn-sm">View Case Study →</a>
+            <a href="http://thejuleshouse.com/" target="_blank" class="pg-external-link" title="Open Live Site">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><path d="M10 2h4v4"/><path d="M14 2L8 8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── WIDE CARD: Brand Showcase ── -->
+      <div class="pg-card pg-card--wide reveal reveal-delay-1" data-categories="branding">
+        <div class="pg-card-img pg-card-img--branding">
+          <!-- Decorative brand asset grid -->
+          <div class="pg-brand-mock" aria-hidden="true">
+            <!-- Colour palette strip -->
+            <div class="pbm-palette">
+              <span class="pbm-swatch" style="background:#7c5cfc;"></span>
+              <span class="pbm-swatch" style="background:#a07dff;"></span>
+              <span class="pbm-swatch" style="background:#c4b0ff;"></span>
+              <span class="pbm-swatch" style="background:#f2eeff;"></span>
+              <span class="pbm-swatch" style="background:#1a1530;"></span>
+              <span class="pbm-swatch" style="background:#0d0b1a;"></span>
+            </div>
+            <!-- Type specimen -->
+            <div class="pbm-type">
+              <span class="pbm-type-head">Aa</span>
+              <div class="pbm-type-stack">
+                <span style="font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:800;color:var(--text);">Syne — Display</span>
+                <span style="font-size:0.68rem;color:var(--text3);">DM Sans — Body</span>
+              </div>
+            </div>
+            <!-- Grid of brand marks -->
+            <div class="pbm-marks">
+              <div class="pbm-mark pbm-mark--circle" style="background:rgba(124,92,252,0.15);border:1px solid rgba(124,92,252,0.3);"></div>
+              <div class="pbm-mark pbm-mark--square" style="background:rgba(160,125,255,0.12);border:1px solid rgba(160,125,255,0.25);"></div>
+              <div class="pbm-mark pbm-mark--diamond" style="background:rgba(124,92,252,0.1);border:1px solid rgba(124,92,252,0.2);transform:rotate(45deg);"></div>
+              <div class="pbm-mark pbm-mark--circle" style="background:rgba(196,176,255,0.08);border:1px solid rgba(196,176,255,0.18);width:36px;height:36px;"></div>
+            </div>
+            <!-- Rule line -->
+            <div class="pbm-rule"></div>
+            <!-- Label -->
+            <div class="pbm-label">Brand Work — Logos · Magazines · Imagery</div>
+          </div>
+          <div class="pg-card-img-overlay" style="background:linear-gradient(to right, rgba(7,6,15,0.15) 0%, rgba(7,6,15,0.65) 100%);"></div>
+        </div>
+        <div class="pg-card-body pg-card-body--wide">
+          <div class="pgw-left">
+            <div class="pg-card-meta">
+              <span class="pg-status pg-status--live">
+                <span class="status-dot"></span> Live
+              </span>
+              <span class="pg-card-year">2025</span>
+            </div>
+            <h2 class="pg-card-title">Brand Showcase</h2>
+            <p class="pg-card-desc">A collection of brand work spanning logos, magazine layouts, backgrounds, and visual imagery — everything I've designed outside of code. Built to show the full range of what I bring to a project beyond the screen.</p>
+            <div class="pg-card-tags">
+              <span class="tag">Logos</span>
+              <span class="tag">Magazines</span>
+              <span class="tag">Illustration</span>
+              <span class="tag">Visual Design</span>
+            </div>
+          </div>
+          <div class="pgw-right">
+            <div class="pg-card-actions" style="flex-direction:column;align-items:flex-start;gap:0.75rem;">
+              <a href="branding-case-study.html" class="btn btn-ghost btn-sm">View Showcase →</a>
+              <a href="#" class="pg-external-link" title="View Showcase">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><path d="M10 2h4v4"/><path d="M14 2L8 8"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CURRENTLY BUILDING BAR
+  ══════════════════════════════════ -->
+  <section id="building-bar">
+    <div class="bb-inner reveal">
+      <div class="bb-label">
+        <div class="bb-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <div class="bb-title">Currently Building</div>
+          <div class="bb-sub">New features, platforms, and ideas in progress.</div>
+        </div>
+      </div>
+      <div class="bb-items">
+        <div class="bb-item">
+          <span class="bb-item-name">Build Foundry</span>
+          <span class="bb-item-desc">Client portal &amp; dashboard</span>
+        </div>
+        <div class="bb-arrow">→</div>
+        <div class="bb-item">
+          <span class="bb-item-name">Pathway</span>
+          <span class="bb-item-desc">AI advisor &amp; 4-year planner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CTA STRIP
+  ══════════════════════════════════ -->
+  <section id="projects-cta">
+    <div class="pcta-inner reveal">
+      <div class="pcta-left">
+        <p class="pcta-title">Have a project in mind?</p>
+        <p class="pcta-sub">Let's build something great together.</p>
+      </div>
+      <a href="../index.html#cta" class="btn btn-primary">
+        Let's Connect
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-divider"></div>
+      <h2 class="footer-heading">Let's Build Something Together</h2>
+      <p class="footer-sub">Open to software engineering, web development, and creative collaborations.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/nick-jules-a03a71270/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JK-nick" target="_blank">GitHub</a>
+        <a href="mailto:NckJules@yahoo.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Nick Jules</p>
+      <div class="footer-divider"></div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Filter bar
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.pg-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all') {
+            card.style.opacity = '1';
+            card.style.pointerEvents = 'auto';
+            card.classList.remove('filtered-out');
+          } else {
+            const cats = card.dataset.categories || '';
+            if (cats.includes(filter)) {
+              card.style.opacity = '1';
+              card.style.pointerEvents = 'auto';
+              card.classList.remove('filtered-out');
+            } else {
+              card.style.opacity = '0.25';
+              card.style.pointerEvents = 'none';
+              card.classList.add('filtered-out');
+            }
+          }
+        });
+      });
+    });
+
+    // Blinking cursor
+    setInterval(() => {
+      const cursor = document.querySelector('.c-cursor');
+      if (cursor) cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }, 530);
+  </script>
+
+</body>
+</html>

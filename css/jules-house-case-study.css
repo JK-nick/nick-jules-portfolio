@@ -1,0 +1,66 @@
+/* ============================================================
+   NICK JULES — jules-house-case-study.css
+   Inherits all structure from olivia-case-study.css.
+   Only overrides: colors, mockup image sizing, image positions.
+   ============================================================ */
+
+@import url("olivia-case-study.css");
+
+/* ── Gold accent palette ── */
+:root {
+  --accent:  #d8b15a;
+  --accent2: #f3d28b;
+}
+
+/* ── Mockup image sizing ── */
+.jules-mockup-wrap {
+  height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jules-mockup-img {
+  width: min(100%, 640px);
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 22px;
+  border: 1px solid rgba(216,177,90,0.32);
+  box-shadow:
+    0 0 60px rgba(216,177,90,0.15),
+    0 30px 90px rgba(0,0,0,0.65);
+  margin-left: 0;
+  margin-top: 0;
+  transform: rotateY(-10deg) rotateX(3deg);
+  animation: cs-float 7s ease-in-out infinite;
+}
+
+/* ── Screenshot frame image position ── */
+.jules-frame img {
+  max-height: 320px;
+  object-position: top center;
+}
+
+/* ── Results card min-height ── */
+.jules-results-card {
+  min-height: 170px;
+}
+
+/* ── Gallery images always crop from top ── */
+.cs-gallery-item img {
+  object-position: top center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .jules-mockup-img {
+    transform: none;
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .jules-mockup-wrap {
+    height: auto;
+  }
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Showcase — Nick Jules</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/branding-showcase.css">
+  <style>
+    #bs-identity-breakdown {
+      padding: 4rem 0 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: clamp(1.5rem, 5vw, 3rem);
+      padding-right: clamp(1.5rem, 5vw, 3rem);
+    }
+    .bs-breakdown-header { margin-bottom: 2.5rem; }
+    .bs-breakdown-title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: var(--text-primary, #fff);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .bs-breakdown-sub {
+      color: var(--text-muted, rgba(255,255,255,0.55));
+      font-size: 0.95rem;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .bs-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .bs-breakdown-card {
+      background: var(--card-bg, rgba(255,255,255,0.04));
+      border: 1px solid var(--border, rgba(255,255,255,0.08));
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+    .bs-breakdown-card:hover { border-color: rgba(124,92,252,0.35); }
+    .bs-breakdown-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .bs-breakdown-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent, #7c5cfc);
+      margin-bottom: 0.6rem;
+    }
+    .bs-breakdown-body {
+      font-size: 0.9rem;
+      color: var(--text-muted, rgba(255,255,255,0.6));
+      line-height: 1.65;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+  <canvas class="bs-grain" id="bsGrain" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════════════
+       NAV
+  ══════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">NICK JULES</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html" class="nav-active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../assets/Nick_Jules_Resume.docx" class="nav-cta">Download Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="bs-hero">
+    <a href="projects.html" class="bs-back">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+      Projects
+    </a>
+
+    <div class="bs-hero-inner">
+
+      <!-- Left: copy -->
+      <div class="bs-hero-copy">
+        <p class="bs-eyebrow">Creative Archive</p>
+        <h1 class="bs-hero-title">
+          Design systems,<br>
+          visual <em>identity,</em><br>
+          and storytelling.
+        </h1>
+        <p class="bs-hero-sub">A curated record of brand work built for real clients — logos, editorial layouts, and digital assets that communicate before a word is read.</p>
+        <div class="bs-hero-meta">
+          <div class="bs-meta-stat">
+            <span class="bs-meta-n">7</span>
+            <span class="bs-meta-l">Pieces</span>
+          </div>
+          <span class="bs-meta-sep"></span>
+          <div class="bs-meta-stat">
+            <span class="bs-meta-n">4+</span>
+            <span class="bs-meta-l">Clients</span>
+          </div>
+          <span class="bs-meta-sep"></span>
+          <div class="bs-meta-stat">
+            <span class="bs-meta-n">3</span>
+            <span class="bs-meta-l">Disciplines</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: collage — one dominant image + overlapping supporting pieces -->
+      <div class="bs-hero-collage" aria-hidden="true">
+
+        <!-- Atmospheric depth layers -->
+        <div class="bs-atmo bs-atmo--1"></div>
+        <div class="bs-atmo bs-atmo--2"></div>
+        <div class="bs-atmo bs-atmo--3"></div>
+        <!-- Faint grid lines -->
+        <div class="bs-grid-lines"></div>
+
+        <!-- DOMINANT hero image — magazine cover commands the space -->
+        <div class="bs-float bs-float--hero">
+          <div class="bs-float-inner">
+            <img src="../assets/branding/MagCov.png" alt="">
+            <div class="bs-float-label">
+              <span class="bs-fl-cat">Editorial</span>
+              <span class="bs-fl-year">2025</span>
+            </div>
+          </div>
+          <div class="bs-float-glow bs-float-glow--warm"></div>
+        </div>
+
+        <!-- Supporting: Build Foundry logo — overlaps top left -->
+        <div class="bs-float bs-float--sup1">
+          <div class="bs-float-inner">
+            <img src="../assets/branding/BuildF.png" alt="">
+            <div class="bs-float-label">
+              <span class="bs-fl-cat">Identity</span>
+              <span class="bs-fl-year">2025</span>
+            </div>
+          </div>
+          <div class="bs-float-glow bs-float-glow--purple"></div>
+        </div>
+
+        <!-- Supporting: Iron Sharpens Iron — bottom right, rotated -->
+        <div class="bs-float bs-float--sup2">
+          <div class="bs-float-inner">
+            <img src="../assets/branding/IxI.png" alt="">
+            <div class="bs-float-label">
+              <span class="bs-fl-cat">Logo System</span>
+              <span class="bs-fl-year">Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supporting: Client logo — partially visible, atmospheric -->
+        <div class="bs-float bs-float--sup3">
+          <div class="bs-float-inner">
+            <img src="../assets/branding/ClientLogo.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bs-hero-rule"></div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FEATURED IDENTITY BREAKDOWN
+  ══════════════════════════════════ -->
+  <section id="bs-identity-breakdown">
+    <div class="bs-breakdown-inner">
+      <div class="bs-breakdown-header">
+        <p class="bs-eyebrow">Featured Identity</p>
+        <h2 class="bs-breakdown-title">Build Foundry</h2>
+        <p class="bs-breakdown-sub">The brand built for the platform — a tech-forward identity that needed to feel both industrial and professional.</p>
+      </div>
+      <div class="bs-breakdown-grid">
+        <div class="bs-breakdown-card">
+          <div class="bs-breakdown-icon">🎯</div>
+          <h3 class="bs-breakdown-label">Goal</h3>
+          <p class="bs-breakdown-body">Create a mark for Build Foundry that communicated a tech-forward product studio — something that felt credible, distinct, and ready to put in front of real clients and investors.</p>
+        </div>
+        <div class="bs-breakdown-card">
+          <div class="bs-breakdown-icon">⚙️</div>
+          <h3 class="bs-breakdown-label">Approach</h3>
+          <p class="bs-breakdown-body">Combined a blacksmithing metaphor with circuit board aesthetics — leaning into the "foundry" concept to frame software development as craftsmanship. Iterated through multiple directions before landing on the BF monogram with a teal flame accent.</p>
+        </div>
+        <div class="bs-breakdown-card">
+          <div class="bs-breakdown-icon">✅</div>
+          <h3 class="bs-breakdown-label">Outcome</h3>
+          <p class="bs-breakdown-body">A complete identity system used across the platform, portfolio, and client-facing materials. The mark is immediately recognizable and scales cleanly from favicon size to full hero placement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FILTER BAR
+  ══════════════════════════════════ -->
+  <div class="bs-filter-wrap">
+    <div class="bs-filter-bar">
+      <button class="bs-pill active" data-filter="all">All Work</button>
+      <button class="bs-pill" data-filter="identity">Identity</button>
+      <button class="bs-pill" data-filter="stories">Stories</button>
+      <button class="bs-pill" data-filter="artifacts">Artifacts</button>
+      <button class="bs-pill" data-filter="moments">Moments</button>
+    </div>
+    <span class="bs-filter-count" id="bsCount">7 pieces</span>
+  </div>
+
+  <!-- ══════════════════════════════════
+       FEATURED PIECE — Full width anchor
+  ══════════════════════════════════ -->
+  <section id="bs-featured">
+    <div class="bs-featured-inner">
+      <article class="bs-featured-card" data-filter="stories"
+        data-title="A Year of Love"
+        data-client="Personal Project"
+        data-cat="Stories"
+        data-tools="Canva · Photo Editing"
+        data-desc="An editorial magazine cover for 'A Year of Love' — styled with a dark green ornate border, layered gold typography, and composed photography. Created as a sentimental anniversary gift piece. This is what happens when design becomes personal — every detail deliberate, every choice emotional.">
+        <div class="bs-featured-img">
+          <img src="../assets/branding/MagCov.png" alt="A Year of Love magazine cover">
+        </div>
+        <div class="bs-featured-meta">
+          <div class="bs-featured-labels">
+            <span class="bs-featured-cat">Stories</span>
+            <span class="bs-featured-badge">Featured Piece</span>
+          </div>
+          <div class="bs-featured-text">
+            <h2 class="bs-featured-title">A Year of Love</h2>
+            <p class="bs-featured-desc">Editorial design as emotional artifact — built for someone real, not a brief.</p>
+          </div>
+          <div class="bs-featured-cta">Click to view →</div>
+        </div>
+        <div class="bs-featured-glow"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       MASONRY GRID — Supporting work
+  ══════════════════════════════════ -->
+  <section id="bs-grid">
+    <div class="bs-grid-wrap">
+
+      <!-- Build Foundry — square / Identity -->
+      <article class="bs-card bs-card--sq" data-filter="identity"
+        data-title="Build Foundry"
+        data-client="Personal Brand"
+        data-cat="Identity"
+        data-tools="Canva · AI Generation"
+        data-desc="The official mark for Build Foundry — a tech-forward blacksmithing metaphor combining circuit board aesthetics with the golden BF monogram and a teal flame accent. Designed to feel both industrial and high-tech.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/BuildF.png" alt="Build Foundry logo" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Identity</span>
+          <span class="bs-ed-year">2025</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Identity System</span>
+          <strong class="bs-card-name">Build Foundry</strong>
+          <span class="bs-card-client">Personal Brand</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+      <!-- Flower Field — wide / Artifacts -->
+      <article class="bs-card bs-card--wide" data-filter="artifacts"
+        data-title="Spider Lily Field"
+        data-client="Personal Work"
+        data-cat="Artifacts"
+        data-tools="AI Generation · Digital Composition"
+        data-desc="A detailed woodcut-style illustration of spider lilies in a dramatic landscape — flowing river currents, a hidden dragon in the lower right, and layered botanical drama. All black and white with fine linework.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/FlowerField.png" alt="Spider lily field illustration" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Illustration</span>
+          <span class="bs-ed-year">2025</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Artifacts</span>
+          <strong class="bs-card-name">Spider Lily Field</strong>
+          <span class="bs-card-client">Personal Work</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+      <!-- A&H Client Logo — tall / Identity -->
+      <article class="bs-card bs-card--tall" data-filter="identity"
+        data-title="A&H — @el.Host"
+        data-client="Client Commission"
+        data-cat="Identity"
+        data-tools="Canva · AI Generation"
+        data-desc="A luxury medallion-style logo for a social media hosting brand — gold embossed seal with ornate detailing, A&H monogram inside a heart, and banner typography. Rich purple and gold palette communicates prestige.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/ClientLogo.png" alt="A&H @el.Host logo" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Logo</span>
+          <span class="bs-ed-year">Client</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Identity System</span>
+          <strong class="bs-card-name">A&H — @el.Host</strong>
+          <span class="bs-card-client">Client Commission</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+      <!-- Floral Background — wide / Artifacts -->
+      <article class="bs-card bs-card--wide" data-filter="artifacts"
+        data-title="Floral Background Asset"
+        data-client="Client Commission"
+        data-cat="Artifacts"
+        data-tools="Canva · AI Generation"
+        data-desc="An elegant botanical background featuring hydrangea line art in golden ink with decorative corner flourishes on a warm cream ground. Created for event stationery, invitations, or print collateral.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/FlowerBG.png" alt="Floral background asset" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Visual System</span>
+          <span class="bs-ed-year">Client</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Artifacts</span>
+          <strong class="bs-card-name">Floral Background</strong>
+          <span class="bs-card-client">Client Commission</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+      <!-- Iron Sharpens Iron — square / Identity -->
+      <article class="bs-card bs-card--sq" data-filter="identity"
+        data-title="Iron Sharpens Iron"
+        data-client="Client Commission"
+        data-cat="Identity"
+        data-tools="Canva · AI Generation"
+        data-desc="A bold crossed-swords emblem for Iron Sharpens Iron — a mentorship and accountability brand. Black and gold color story, shield medallion center, serif typography, and the IS monogram below the crest.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/IxI.png" alt="Iron Sharpens Iron logo" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Emblem</span>
+          <span class="bs-ed-year">Client</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Identity System</span>
+          <strong class="bs-card-name">Iron Sharpens Iron</strong>
+          <span class="bs-card-client">Client Commission</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+      <!-- NY Cat — square / Moments -->
+      <article class="bs-card bs-card--sq" data-filter="moments"
+        data-title="Happy New Year"
+        data-client="Personal Work"
+        data-cat="Moments"
+        data-tools="AI Generation"
+        data-desc="A pixel-art black cat sticker design with a festive Santa hat and retro speech bubble wishing 'Happy New Years!' — created as a holiday social media asset and digital greeting. Small, intentional, made to spark joy.">
+        <div class="bs-card-media">
+          <img src="../assets/branding/NYCat.png" alt="Happy New Year pixel cat sticker" loading="lazy">
+        </div>
+        <div class="bs-card-editorial">
+          <span class="bs-ed-cat">Moment</span>
+          <span class="bs-ed-year">2025</span>
+        </div>
+        <div class="bs-card-overlay">
+          <span class="bs-card-tag">Moments</span>
+          <strong class="bs-card-name">Happy New Year</strong>
+          <span class="bs-card-client">Personal Work</span>
+        </div>
+        <div class="bs-card-glow"></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       MODAL
+  ══════════════════════════════════ -->
+  <div class="bs-modal" id="bsModal" aria-modal="true" aria-hidden="true" role="dialog">
+    <div class="bs-modal-bg" id="bsModalBg"></div>
+    <div class="bs-modal-shell">
+      <button class="bs-modal-x" id="bsModalX" aria-label="Close">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
+      </button>
+      <div class="bs-modal-img-col">
+        <div class="bs-modal-img-frame">
+          <img class="bs-modal-img" id="bsModalImg" src="" alt="">
+        </div>
+      </div>
+      <div class="bs-modal-info-col">
+        <span class="bs-modal-cat-tag" id="bsModalCat"></span>
+        <h2 class="bs-modal-h2" id="bsModalTitle"></h2>
+        <p class="bs-modal-body" id="bsModalDesc"></p>
+        <div class="bs-modal-fields">
+          <div class="bs-modal-field">
+            <span class="bs-modal-field-lbl">Created for</span>
+            <span class="bs-modal-field-val" id="bsModalClient"></span>
+          </div>
+          <div class="bs-modal-field">
+            <span class="bs-modal-field-lbl">Tools used</span>
+            <span class="bs-modal-field-val" id="bsModalTools"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       CTA
+  ══════════════════════════════════ -->
+  <section id="bs-cta">
+    <div class="bs-cta-inner">
+      <div class="bs-cta-copy">
+        <h2 class="bs-cta-h">Need something designed?</h2>
+        <p class="bs-cta-sub">Logos, brand kits, editorial layouts — let's build your identity.</p>
+      </div>
+      <a href="../index.html#cta" class="btn btn-primary">
+        Let's Connect
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-divider"></div>
+      <h2 class="footer-heading">Let's Build Something Together</h2>
+      <p class="footer-sub">Open to software engineering, web development, and creative collaborations.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/nick-jules-a03a71270/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JK-nick" target="_blank">GitHub</a>
+        <a href="mailto:NckJules@yahoo.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Nick Jules</p>
+      <div class="footer-divider"></div>
+    </div>
+  </footer>
+
+  <script>
+  /* ── Grain ── */
+  (function() {
+    const canvas = document.getElementById('bsGrain');
+    const ctx = canvas.getContext('2d');
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    function drawGrain() {
+      const w = canvas.width, h = canvas.height;
+      const img = ctx.createImageData(w, h);
+      const d = img.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const v = Math.random() * 255;
+        d[i] = d[i+1] = d[i+2] = v;
+        d[i+3] = 16;
+      }
+      ctx.putImageData(img, 0, 0);
+      requestAnimationFrame(drawGrain);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    drawGrain();
+  })();
+
+  /* ── Nav ── */
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+  /* ── Filter — covers both featured card and grid cards ── */
+  const pills = document.querySelectorAll('.bs-pill');
+  const gridCards = document.querySelectorAll('.bs-card');
+  const featuredCard = document.querySelector('.bs-featured-card');
+  const featuredSection = document.getElementById('bs-featured');
+  const countEl = document.getElementById('bsCount');
+
+  function updateCount(filter) {
+    let n = 0;
+    if (filter === 'all') {
+      n = gridCards.length + 1; // +1 for featured
+    } else {
+      n = [...gridCards].filter(c => c.dataset.filter === filter).length;
+      if (featuredCard && featuredCard.dataset.filter === filter) n++;
+    }
+    countEl.textContent = n + ' piece' + (n !== 1 ? 's' : '');
+  }
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const f = pill.dataset.filter;
+      updateCount(f);
+
+      // Handle featured card
+      if (featuredCard) {
+        const showFeatured = f === 'all' || featuredCard.dataset.filter === f;
+        featuredSection.style.opacity = showFeatured ? '1' : '0.1';
+        featuredSection.style.pointerEvents = showFeatured ? 'auto' : 'none';
+        featuredSection.style.transition = 'opacity 0.3s';
+      }
+
+      // Handle grid cards
+      gridCards.forEach(card => {
+        const show = f === 'all' || card.dataset.filter === f;
+        card.classList.toggle('bs-card--hidden', !show);
+      });
+    });
+  });
+
+  /* ── Modal ── */
+  const modal = document.getElementById('bsModal');
+  const modalBg = document.getElementById('bsModalBg');
+  const modalX = document.getElementById('bsModalX');
+
+  function openModal(el) {
+    document.getElementById('bsModalImg').src = el.querySelector('img').src;
+    document.getElementById('bsModalImg').alt = el.querySelector('img').alt;
+    document.getElementById('bsModalCat').textContent    = el.dataset.cat;
+    document.getElementById('bsModalTitle').textContent  = el.dataset.title;
+    document.getElementById('bsModalDesc').textContent   = el.dataset.desc;
+    document.getElementById('bsModalClient').textContent = el.dataset.client;
+    document.getElementById('bsModalTools').textContent  = el.dataset.tools;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Both grid cards and featured card open modal
+  [...gridCards, featuredCard].filter(Boolean).forEach(el => el.addEventListener('click', () => openModal(el)));
+  modalBg.addEventListener('click', closeModal);
+  modalX.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
+
+</body>
+</html>

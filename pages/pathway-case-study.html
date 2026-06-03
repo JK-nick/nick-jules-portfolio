@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathway — Development Snapshot</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/olivia-case-study.css">
+  <link rel="stylesheet" href="../css/dev-snapshot.css">
+</head>
+<body>
+
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">NICK JULES</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html" class="nav-active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../assets/Nick_Jules_Resume.docx" class="nav-cta">Download Resume</a></li>
+    </ul>
+  </nav>
+
+  <div class="cs-back-wrap">
+    <a href="projects.html" class="cs-back">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+      Back to Projects
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section id="cs-hero">
+    <div class="cs-hero-inner">
+
+      <div class="cs-hero-left reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Development Snapshot</p>
+        <h1 class="cs-hero-title">Pathway</h1>
+        <p class="cs-hero-desc">An AI-powered academic advisor that generates a personalized 4-year college plan from your institution's courses and major — with a built-in advisor you can actually talk to.</p>
+
+        <div class="cs-hero-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">AI</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag dev-tag pathway-dev-tag">● In Active Development</span>
+        </div>
+
+        <div class="cs-hero-btns">
+          <span class="btn btn-primary btn-locked btn-locked--blue">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="8" rx="1.5"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>
+            Live Site — Restricted
+          </span>
+          <a href="https://github.com/JK-nick" target="_blank" class="btn btn-ghost">
+            GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><path d="M10 2h4v4"/><path d="M14 2L8 8"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="cs-hero-right reveal reveal-delay-1">
+        <div class="cs-mockup-wrap snap-mockup-wrap">
+          <div class="snap-locked-preview snap-locked-preview--pathway">
+            <div class="snap-blur-img snap-blur-img--pathway"></div>
+            <div class="snap-lock-overlay snap-lock-overlay--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span>Internal Preview</span>
+            </div>
+          </div>
+          <div class="cs-float-stat snap-float-stat snap-float-stat--blue">
+            <span class="cs-float-num">4</span>
+            <span class="cs-float-lbl">Year Planner</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       BODY
+  ══════════════════════════════════ -->
+  <div class="cs-body">
+
+    <!-- ── THE PROBLEM ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+      </div>
+      <div class="cs-section-inner">
+        <h2 class="cs-section-title">The Problem</h2>
+        <p class="cs-section-text">College academic planning is fragmented, confusing, and often left entirely to the student. Course catalogs are dense, advisor appointments are scarce, and there's no tool that gives students a clear, personalized picture of what their next four years actually look like.</p>
+        <p class="cs-section-text">Pathway is being built to solve that — one institution, one major, one student at a time. Not a generic planner, but an intelligent system that actually knows your curriculum.</p>
+      </div>
+    </section>
+
+    <!-- ── THE SOLUTION ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+      </div>
+      <div class="cs-section-inner cs-section-inner--split">
+        <div class="cs-section-left">
+          <h2 class="cs-section-title">The Solution</h2>
+          <p class="cs-section-text">Pathway ingests a school's course catalog and degree requirements, then generates a semester-by-semester 4-year plan tailored to the student's major, preferences, and credit history.</p>
+          <p class="cs-section-text">Layered on top is an AI advisor — a conversational interface that answers questions, suggests adjustments, and keeps the student on track throughout their degree.</p>
+        </div>
+        <div class="cs-section-right">
+          <div class="cs-screenshot-frame">
+            <div class="cs-screenshot-bar">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="snap-frame-locked">
+              <div class="snap-frame-blur snap-fb--pathway"></div>
+              <div class="snap-frame-lock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                <span>Prototype Preview</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PLANNED FEATURES ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </div>
+      <div class="cs-section-inner">
+        <h2 class="cs-section-title">Core Features</h2>
+        <p class="cs-section-text">Pathway is being built around four pillars: intelligent planning, real-time guidance, institutional integration, and student ownership.</p>
+        <div class="cs-ops-grid">
+          <div class="cs-ops-item">
+            <div class="cs-ops-icon">🗓️</div>
+            <div>
+              <div class="cs-ops-name">4-Year Degree Planner</div>
+              <div class="cs-ops-desc">Auto-generated semester plans based on major requirements, prerequisites, and student credit history.</div>
+            </div>
+          </div>
+          <div class="cs-ops-item">
+            <div class="cs-ops-icon">🤖</div>
+            <div>
+              <div class="cs-ops-name">AI Academic Advisor</div>
+              <div class="cs-ops-desc">Conversational AI that answers questions about courses, requirements, and adjustments — available 24/7.</div>
+            </div>
+          </div>
+          <div class="cs-ops-item">
+            <div class="cs-ops-icon">🏫</div>
+            <div>
+              <div class="cs-ops-name">Institutional Integration</div>
+              <div class="cs-ops-desc">Pulls directly from school course catalogs and degree audits rather than relying on generic templates.</div>
+            </div>
+          </div>
+          <div class="cs-ops-item">
+            <div class="cs-ops-icon">📊</div>
+            <div>
+              <div class="cs-ops-name">Progress Tracking</div>
+              <div class="cs-ops-desc">Visual credit tracking, graduation requirement checks, and semester load balancing built into the dashboard.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MODULE PROGRESS ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <div class="cs-section-inner">
+        <h2 class="cs-section-title">Modules In Development</h2>
+        <p class="cs-section-text">Building from the core planner outward — the AI layer and integrations come once the academic engine is solid.</p>
+        <div class="snap-module-grid">
+          <div class="snap-module-item snap-module-item--blue">
+            <div class="snap-module-header">
+              <span class="snap-module-name">Degree Planner Engine</span>
+              <span class="snap-module-pct">70%</span>
+            </div>
+            <div class="snap-module-bar snap-module-bar--blue"><div class="snap-module-fill snap-module-fill--blue" style="width:70%;"></div></div>
+            <div class="snap-module-status snap-status--active snap-status--blue">● Active Build</div>
+          </div>
+          <div class="snap-module-item snap-module-item--blue">
+            <div class="snap-module-header">
+              <span class="snap-module-name">Student Dashboard UI</span>
+              <span class="snap-module-pct">55%</span>
+            </div>
+            <div class="snap-module-bar snap-module-bar--blue"><div class="snap-module-fill snap-module-fill--blue" style="width:55%;"></div></div>
+            <div class="snap-module-status snap-status--active snap-status--blue">● Active Build</div>
+          </div>
+          <div class="snap-module-item snap-module-item--blue">
+            <div class="snap-module-header">
+              <span class="snap-module-name">AI Advisor Layer</span>
+              <span class="snap-module-pct">30%</span>
+            </div>
+            <div class="snap-module-bar snap-module-bar--blue"><div class="snap-module-fill snap-module-fill--blue" style="width:30%;"></div></div>
+            <div class="snap-module-status snap-status--progress">◐ In Progress</div>
+          </div>
+          <div class="snap-module-item snap-module-item--blue">
+            <div class="snap-module-header">
+              <span class="snap-module-name">Institutional Catalog API</span>
+              <span class="snap-module-pct">Planned</span>
+            </div>
+            <div class="snap-module-bar snap-module-bar--blue"><div class="snap-module-fill snap-module-fill--planned" style="width:10%;"></div></div>
+            <div class="snap-module-status snap-status--planned">○ Scoped &amp; Planned</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TECH STACK ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="cs-section-inner">
+        <h2 class="cs-section-title">Tech Stack</h2>
+        <div class="cs-tech-stack">
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">⚛️</span><span>React</span></div>
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">🟢</span><span>Node.js</span></div>
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">🍃</span><span>MongoDB</span></div>
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">🤖</span><span>OpenAI API</span></div>
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">🎨</span><span>Tailwind CSS</span></div>
+          <div class="cs-tech-item cs-tech-item--custom"><span class="cs-tech-icon-custom">☁️</span><span>Render</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROTOTYPE GALLERY ── -->
+    <section class="cs-gallery-section reveal">
+      <div class="cs-gallery-header">
+        <div class="cs-section-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <h2 class="cs-section-title">Prototype Gallery</h2>
+      </div>
+      <div class="cs-gallery">
+        <div class="cs-gallery-item snap-gallery-item">
+          <div class="snap-gallery-locked">
+            <div class="snap-gallery-blur snap-gb--p1"></div>
+            <div class="snap-gallery-lock snap-gallery-lock--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          </div>
+          <div class="cs-gallery-caption">Semester Planner View</div>
+        </div>
+        <div class="cs-gallery-item snap-gallery-item">
+          <div class="snap-gallery-locked">
+            <div class="snap-gallery-blur snap-gb--p2"></div>
+            <div class="snap-gallery-lock snap-gallery-lock--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          </div>
+          <div class="cs-gallery-caption">AI Advisor Chat</div>
+        </div>
+        <div class="cs-gallery-item snap-gallery-item">
+          <div class="snap-gallery-locked">
+            <div class="snap-gallery-blur snap-gb--p3"></div>
+            <div class="snap-gallery-lock snap-gallery-lock--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          </div>
+          <div class="cs-gallery-caption">Degree Audit Dashboard</div>
+        </div>
+        <div class="cs-gallery-item snap-gallery-item">
+          <div class="snap-gallery-locked">
+            <div class="snap-gallery-blur snap-gb--p4"></div>
+            <div class="snap-gallery-lock snap-gallery-lock--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          </div>
+          <div class="cs-gallery-caption">Course Selection UI</div>
+        </div>
+        <div class="cs-gallery-item snap-gallery-item">
+          <div class="snap-gallery-locked">
+            <div class="snap-gallery-blur snap-gb--p5"></div>
+            <div class="snap-gallery-lock snap-gallery-lock--blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          </div>
+          <div class="cs-gallery-caption">Progress Tracker</div>
+        </div>
+      </div>
+      <div class="cs-gallery-hint">scroll to see more →</div>
+    </section>
+
+    <!-- ── DEVELOPMENT NOTES ── -->
+    <section class="cs-section reveal">
+      <div class="cs-section-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="cs-section-inner cs-section-inner--split">
+        <div class="cs-section-left">
+          <h2 class="cs-section-title">Development Notes</h2>
+          <ul class="cs-challenges-list">
+            <li>Currently building the degree planner engine — prerequisite logic and credit validation are the core challenges</li>
+            <li>AI advisor layer is in early design — exploring OpenAI function calling for structured academic responses</li>
+            <li>NSU catalog being used as the first institutional dataset for testing and validation</li>
+            <li>React component architecture being designed for scalability across multiple institutions</li>
+          </ul>
+        </div>
+        <div class="cs-section-right">
+          <div class="cs-results-card snap-dev-card snap-dev-card--blue">
+            <div class="cs-results-label">Overall Progress</div>
+            <div class="cs-results-num snap-results-num--blue">52%</div>
+            <div class="cs-results-sub">across all active modules</div>
+            <div class="cs-results-chart">
+              <svg viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="pwline" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#06b6d4" stop-opacity="1"/>
+                  </linearGradient>
+                  <linearGradient id="pwfill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 68 C20 68 40 64 60 58 C80 52 100 54 120 44 C140 34 160 40 180 30 C200 20 220 24 240 15 C250 10 255 8 260 5" stroke="url(#pwline)" stroke-width="2" fill="none"/>
+                <path d="M0 68 C20 68 40 64 60 58 C80 52 100 54 120 44 C140 34 160 40 180 30 C200 20 220 24 240 15 C250 10 255 8 260 5 L260 70 L0 70 Z" fill="url(#pwfill)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /cs-body -->
+
+  <div class="cs-project-nav">
+    <a href="sharknet-case-study.html" class="cs-nav-item cs-nav-item--prev">
+      <span class="cs-nav-label">Previous Project</span>
+      <span class="cs-nav-name">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+        SharkNet
+      </span>
+    </a>
+    <a href="projects.html" class="cs-nav-center" title="All Projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    </a>
+    <a href="buildfoundry-case-study.html" class="cs-nav-item cs-nav-item--next">
+      <span class="cs-nav-label">Next Project</span>
+      <span class="cs-nav-name">
+        Build Foundry
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg>
+      </span>
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-divider"></div>
+      <h2 class="footer-heading">Let's Build Something Together</h2>
+      <p class="footer-sub">Open to software engineering, web development, and creative collaborations.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/nick-jules-a03a71270/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JK-nick" target="_blank">GitHub</a>
+        <a href="mailto:NckJules@yahoo.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Nick Jules</p>
+      <div class="footer-divider"></div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

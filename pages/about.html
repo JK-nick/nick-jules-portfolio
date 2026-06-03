@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Nick Jules</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <style>
+    #ab-currently { padding: 4rem 0 2rem; }
+    .ab-currently-card {
+      background: var(--card-bg, rgba(255,255,255,0.04));
+      border: 1px solid var(--border, rgba(255,255,255,0.08));
+      border-radius: 1.25rem;
+      padding: 2rem 2.25rem;
+      max-width: 780px;
+    }
+    .ab-currently-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .ab-currently-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .ab-currently-dot {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent, #7c5cfc);
+      margin-top: 5px;
+      box-shadow: 0 0 8px var(--accent, #7c5cfc);
+    }
+    .ab-currently-dot--open {
+      background: transparent;
+      border: 2px solid var(--accent, #7c5cfc);
+      box-shadow: none;
+    }
+    .ab-currently-name {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-primary, #fff);
+      margin-bottom: 0.2rem;
+    }
+    .ab-currently-desc {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted, rgba(255,255,255,0.5));
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">NICK JULES</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="../assets/Nick_Jules_Resume.docx" class="nav-cta">Download Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════
+       1. HERO
+  ══════════════════════════════ -->
+  <section id="ab-hero">
+    <div class="ab-hero-inner">
+
+      <div class="ab-hero-left">
+        <p class="section-eyebrow ab-eyebrow">About</p>
+        <h1 class="ab-hero-title">
+          Builder.<br>
+          <span class="accent">Designer.</span><br>
+          Community Driven.
+        </h1>
+        <p class="ab-hero-desc">Computer Science student at NSU building websites, brands, platforms, and digital systems for real people before graduation.</p>
+        <div class="ab-hero-actions">
+          <a href="../assets/Nick_Jules_Resume.docx" class="btn btn-primary">
+            Download Resume
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8M4 7l4 4 4-4"/><path d="M2 13h12"/></svg>
+          </a>
+          <a href="../index.html#cta" class="btn btn-ghost">
+            Let's Connect
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ab-hero-right">
+        <div class="ab-portrait-wrap">
+          <div class="ab-portrait-frame">
+            <img src="../assets/images/Nick.png" alt="Photo of Nick Jules" class="ab-portrait">
+          </div>
+          <div class="ab-float-card ab-float-card--1">
+            <span class="ab-fc-num">5+</span>
+            <span class="ab-fc-lbl">Projects Built</span>
+          </div>
+          <div class="ab-float-card ab-float-card--2">
+            <span class="ab-fc-num">4+</span>
+            <span class="ab-fc-lbl">Clients Served</span>
+          </div>
+          <div class="ab-float-card ab-float-card--3">
+            <span class="ab-fc-icon">🎓</span>
+            <span class="ab-fc-lbl">NSU — CS</span>
+          </div>
+          <div class="ab-portrait-bloom" aria-hidden="true"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CURRENTLY BUILDING
+  ══════════════════════════════ -->
+  <section id="ab-currently">
+    <div class="ab-section-inner">
+      <div class="ab-section-header reveal">
+        <p class="section-eyebrow">Currently Building</p>
+        <h2 class="section-title">What I'm focused on<br>right now.</h2>
+      </div>
+      <div class="ab-currently-card reveal">
+        <ul class="ab-currently-list">
+          <li>
+            <span class="ab-currently-dot"></span>
+            <div>
+              <span class="ab-currently-name">Build Foundry</span>
+              <span class="ab-currently-desc">Centralized digital operations platform for client portals, scheduling, and CRM</span>
+            </div>
+          </li>
+          <li>
+            <span class="ab-currently-dot"></span>
+            <div>
+              <span class="ab-currently-name">Pathway</span>
+              <span class="ab-currently-desc">Career guidance tool helping students map a path from where they are to where they want to be</span>
+            </div>
+          </li>
+          <li>
+            <span class="ab-currently-dot"></span>
+            <div>
+              <span class="ab-currently-name">Expanding Branding Portfolio</span>
+              <span class="ab-currently-desc">Taking on new client commissions in logo design, brand identity, and digital assets</span>
+            </div>
+          </li>
+          <li>
+            <span class="ab-currently-dot ab-currently-dot--open"></span>
+            <div>
+              <span class="ab-currently-name">Seeking Software Development Opportunities</span>
+              <span class="ab-currently-desc">Open to internships, junior roles, and collaborations in software engineering and web development</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       3. WHAT I BRING
+  ══════════════════════════════ -->
+  <section id="ab-bring">
+    <div class="ab-section-inner">
+      <div class="ab-section-header reveal">
+        <p class="section-eyebrow">What I Bring</p>
+        <h2 class="section-title">Four disciplines.<br>One person.</h2>
+      </div>
+      <div class="ab-bring-grid">
+
+        <div class="ab-bring-card reveal reveal-delay-1">
+          <div class="ab-bring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="ab-bring-name">Web Development</h3>
+          <p class="ab-bring-desc">Full front-end builds from scratch — HTML, CSS, JavaScript, React. Responsive, accessible, deployed and live in the real world.</p>
+          <div class="ab-bring-tags">
+            <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Node.js</span>
+          </div>
+          <div class="ab-bring-glow"></div>
+        </div>
+
+        <div class="ab-bring-card reveal reveal-delay-2">
+          <div class="ab-bring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M4.22 4.22l2.12 2.12m11.32 11.32 2.12 2.12M2 12h3m14 0h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </div>
+          <h3 class="ab-bring-name">Branding &amp; Design</h3>
+          <p class="ab-bring-desc">Visual identity systems, logo design, editorial layouts, and digital assets — built with intention and a clear point of view.</p>
+          <div class="ab-bring-tags">
+            <span class="tag">Logo Design</span><span class="tag">Brand Identity</span><span class="tag">Canva</span>
+          </div>
+          <div class="ab-bring-glow"></div>
+        </div>
+
+        <div class="ab-bring-card reveal reveal-delay-3">
+          <div class="ab-bring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="ab-bring-name">Digital Operations</h3>
+          <p class="ab-bring-desc">Client platforms, scheduling systems, automation workflows, and CRM architecture — turning scattered tools into one coherent operation.</p>
+          <div class="ab-bring-tags">
+            <span class="tag">Automation</span><span class="tag">Systems Design</span><span class="tag">MongoDB</span>
+          </div>
+          <div class="ab-bring-glow"></div>
+        </div>
+
+        <div class="ab-bring-card reveal reveal-delay-4">
+          <div class="ab-bring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="ab-bring-name">Leadership &amp; Outreach</h3>
+          <p class="ab-bring-desc">Campus leadership, community organizing, and cross-cultural communication — connecting people and making things happen in three languages.</p>
+          <div class="ab-bring-tags">
+            <span class="tag">Community</span><span class="tag">Multilingual</span><span class="tag">Partnerships</span>
+          </div>
+          <div class="ab-bring-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       4. MY STORY
+  ══════════════════════════════ -->
+  <section id="ab-story">
+    <div class="ab-story-inner reveal">
+      <div class="ab-story-label">
+        <p class="section-eyebrow">My Story</p>
+      </div>
+      <div class="ab-story-body">
+        <p class="ab-story-text">I'm not just learning technology — I'm using it to build things that solve real problems. My work sits between development, design, and operations, which lets me understand both the technical side and the human side of a project.</p>
+        <p class="ab-story-text">Before graduation, I've already shipped a live booking platform for a real business, built a Q&amp;A platform with a team, designed brand identities for clients, and I'm currently building my own digital operations product. The goal has always been the same: real work, real impact.</p>
+        <div class="ab-story-quote">
+          "Build before you're ready. Ship before it's perfect. Learn while it's live."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       5. TIMELINE
+  ══════════════════════════════ -->
+  <section id="ab-timeline">
+    <div class="ab-section-inner">
+      <div class="ab-section-header reveal">
+        <p class="section-eyebrow">Journey</p>
+        <h2 class="section-title">Where it comes from.</h2>
+      </div>
+
+      <div class="ab-tl-track">
+
+        <div class="ab-tl-item reveal">
+          <div class="ab-tl-left">
+            <div class="ab-tl-dot"></div>
+            <div class="ab-tl-line"></div>
+          </div>
+          <div class="ab-tl-card">
+            <span class="ab-tl-stage">Foundation</span>
+            <h3 class="ab-tl-title">Nova Southeastern University</h3>
+            <p class="ab-tl-body">Enrolled in Computer Science at NSU — real systems, real deployments, and real team projects from day one. Where the technical foundation was built.</p>
+            <div class="ab-tl-tags"><span class="tag">CS Degree</span><span class="tag">NSU</span></div>
+          </div>
+        </div>
+
+        <div class="ab-tl-item reveal">
+          <div class="ab-tl-left">
+            <div class="ab-tl-dot"></div>
+            <div class="ab-tl-line"></div>
+          </div>
+          <div class="ab-tl-card">
+            <span class="ab-tl-stage">Teaching</span>
+            <h3 class="ab-tl-title">Code Ninjas</h3>
+            <p class="ab-tl-body">Taught and mentored young students in coding and problem solving. Built communication skills and the ability to explain complex ideas clearly and patiently.</p>
+            <div class="ab-tl-tags"><span class="tag">Teaching</span><span class="tag">Mentorship</span><span class="tag">Communication</span></div>
+          </div>
+        </div>
+
+        <div class="ab-tl-item reveal">
+          <div class="ab-tl-left">
+            <div class="ab-tl-dot"></div>
+            <div class="ab-tl-line"></div>
+          </div>
+          <div class="ab-tl-card">
+            <span class="ab-tl-stage">Mission</span>
+            <h3 class="ab-tl-title">One World Quest</h3>
+            <p class="ab-tl-body">Participated in a cross-cultural outreach program — community organizing, branding support, and partnership development. Deepened the value of service over self.</p>
+            <div class="ab-tl-tags"><span class="tag">Outreach</span><span class="tag">Branding</span><span class="tag">Partnerships</span></div>
+          </div>
+        </div>
+
+        <div class="ab-tl-item reveal">
+          <div class="ab-tl-left">
+            <div class="ab-tl-dot"></div>
+            <div class="ab-tl-line"></div>
+          </div>
+          <div class="ab-tl-card">
+            <span class="ab-tl-stage">Collaboration</span>
+            <h3 class="ab-tl-title">SharkNet</h3>
+            <p class="ab-tl-body">Co-built a full-stack Q&amp;A and tutoring platform for NSU students — collaborative GitHub workflow, full deployment on Render, and real users from day one.</p>
+            <div class="ab-tl-tags"><span class="tag">Full-Stack</span><span class="tag">Team Project</span><span class="tag">Live</span></div>
+          </div>
+        </div>
+
+        <div class="ab-tl-item reveal">
+          <div class="ab-tl-left">
+            <div class="ab-tl-dot ab-tl-dot--active"></div>
+          </div>
+          <div class="ab-tl-card ab-tl-card--active">
+            <span class="ab-tl-stage ab-tl-stage--active">● Now</span>
+            <h3 class="ab-tl-title">Build Foundry</h3>
+            <p class="ab-tl-body">Building a centralized digital operations platform — client portals, scheduling automation, branding systems, and CRM under one roof. The project that ties everything together.</p>
+            <div class="ab-tl-tags">
+              <span class="tag tag-active">In Progress</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       6. BEYOND THE SCREEN
+  ══════════════════════════════ -->
+  <section id="ab-beyond">
+    <div class="ab-section-inner">
+      <div class="ab-section-header reveal">
+        <p class="section-eyebrow">Beyond The Screen</p>
+        <h2 class="section-title">The full picture.</h2>
+      </div>
+      <div class="ab-beyond-grid">
+
+        <!-- Languages -->
+        <div class="ab-beyond-card reveal">
+          <div class="ab-beyond-top">
+            <div class="ab-beyond-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="ab-beyond-name">Languages</h3>
+          </div>
+          <div class="ab-lang-list">
+            <div class="ab-lang-item">
+              <span class="ab-lang-name">English</span>
+              <div class="ab-lang-bar"><div class="ab-lang-fill" data-w="100%"></div></div>
+              <span class="ab-lang-level">Native</span>
+            </div>
+            <div class="ab-lang-item">
+              <span class="ab-lang-name">Haitian Creole</span>
+              <div class="ab-lang-bar"><div class="ab-lang-fill" data-w="85%"></div></div>
+              <span class="ab-lang-level">Fluent</span>
+            </div>
+            <div class="ab-lang-item">
+              <span class="ab-lang-name">Spanish</span>
+              <div class="ab-lang-bar"><div class="ab-lang-fill" data-w="72%"></div></div>
+              <span class="ab-lang-level">Conversational</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="ab-beyond-card reveal reveal-delay-1">
+          <div class="ab-beyond-top">
+            <div class="ab-beyond-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </div>
+            <h3 class="ab-beyond-name">What Drives Me</h3>
+          </div>
+          <div class="ab-values-grid">
+            <div class="ab-value-item"><span class="ab-value-emoji">👨‍👩‍👧‍👦</span><span class="ab-value-lbl">Family</span></div>
+            <div class="ab-value-item"><span class="ab-value-emoji">🌍</span><span class="ab-value-lbl">Community</span></div>
+            <div class="ab-value-item"><span class="ab-value-emoji">📈</span><span class="ab-value-lbl">Growth</span></div>
+            <div class="ab-value-item"><span class="ab-value-emoji">🎨</span><span class="ab-value-lbl">Design</span></div>
+            <div class="ab-value-item"><span class="ab-value-emoji">🛠️</span><span class="ab-value-lbl">Building</span></div>
+            <div class="ab-value-item"><span class="ab-value-emoji">✈️</span><span class="ab-value-lbl">Travel</span></div>
+          </div>
+        </div>
+
+        <!-- Right Now -->
+        <div class="ab-beyond-card reveal reveal-delay-2">
+          <div class="ab-beyond-top">
+            <div class="ab-beyond-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="ab-beyond-name">Right Now</h3>
+          </div>
+          <ul class="ab-now-list">
+            <li><span class="ab-now-dot ab-now-dot--green"></span><span>Building Build Foundry</span></li>
+            <li><span class="ab-now-dot ab-now-dot--purple"></span><span>Finishing CS degree at NSU</span></li>
+            <li><span class="ab-now-dot ab-now-dot--purple"></span><span>Taking client commissions</span></li>
+            <li><span class="ab-now-dot ab-now-dot--blue"></span><span>Learning Next.js + MongoDB</span></li>
+            <li><span class="ab-now-dot ab-now-dot--blue"></span><span>Open to internships &amp; collabs</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       7. CTA
+  ══════════════════════════════ -->
+  <section id="ab-cta">
+    <div class="ab-cta-inner reveal">
+      <div class="ab-cta-copy">
+        <p class="section-eyebrow ab-eyebrow" style="justify-content:flex-start; margin-bottom:0.75rem;">Contact</p>
+        <h2 class="ab-cta-h">Let's build something together.</h2>
+        <p class="ab-cta-sub">Whether it's a website, a brand, or a product — if you have a vision, I can help you build it.</p>
+      </div>
+      <div class="ab-cta-buttons">
+        <a href="mailto:NckJules@yahoo.com" class="btn btn-primary">
+          Email Me
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nick-jules-a03a71270/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/JK-nick" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="../assets/Nick_Jules_Resume.docx" class="btn btn-ghost">Resume</a>
+      </div>
+      <div class="ab-cta-glow" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-divider"></div>
+      <h2 class="footer-heading">Let's Build Something Together</h2>
+      <p class="footer-sub">Open to software engineering, web development, and creative collaborations.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/nick-jules-a03a71270/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JK-nick" target="_blank">GitHub</a>
+        <a href="mailto:NckJules@yahoo.com">Email</a>
+      </div>
+      <p class="footer-copy">© 2026 Nick Jules</p>
+      <div class="footer-divider"></div>
+    </div>
+  </footer>
+
+  <script>
+    /* Nav scroll */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () =>
+      nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+    /* Scroll reveal */
+    const revObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+    /* Language bars — animate in on scroll */
+    const langFills = document.querySelectorAll('.ab-lang-fill');
+    langFills.forEach(f => f.style.width = '0%');
+    const langCard = document.querySelector('#ab-beyond .ab-beyond-card');
+    if (langCard) {
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            langFills.forEach(f => { f.style.width = f.dataset.w; });
+          }
+        });
+      }, { threshold: 0.3 }).observe(langCard);
+    }
+  </script>
+
+</body>
+</html>

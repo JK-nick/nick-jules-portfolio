@@ -1,0 +1,507 @@
+/* ============================================================
+   NICK JULES — olivia-case-study.css
+   ============================================================ */
+
+/* ── BACK LINK ── */
+.cs-back-wrap {
+  position: relative;
+  z-index: 1;
+  padding: 6.5rem 5vw 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text3);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+.cs-back svg { width: 14px; height: 14px; }
+.cs-back:hover { color: var(--accent2); }
+
+.nav-active {
+  color: var(--text) !important;
+  position: relative;
+}
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════════════════ */
+#cs-hero {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 5vw 4rem;
+}
+
+.cs-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.cs-hero-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.cs-hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text2);
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+}
+
+.cs-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.cs-hero-btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── MOCKUP ── */
+.cs-mockup-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  perspective: 1400px;
+}
+
+.cs-mockup-img {
+  margin-left: -390px;
+  margin-top: -100px;
+  animation: cs-float 7s ease-in-out infinite;
+}
+
+@keyframes cs-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.cs-hero-right {
+  z-index: 0;
+}
+
+.cs-hero-left {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Floating stat */
+.cs-float-stat {
+  position: absolute;
+  top: -10%;
+  left: -4%;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
+  z-index: 10;
+}
+
+
+.cs-float-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent2);
+  line-height: 1;
+}
+
+.cs-float-lbl {
+  font-size: 0.68rem;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CASE STUDY BODY
+══════════════════════════════════════════════════════════ */
+.cs-body {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5vw 2rem;
+}
+
+/* ── EACH SECTION ── */
+.cs-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: start;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(124,92,252,0.12);
+}
+.cs-section:last-child { border-bottom: none; }
+
+/* Dashed timeline line */
+.cs-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 49px;
+  top: 80px;
+  bottom: 0;
+  border-left: 1.5px dashed rgba(124,92,252,0.22);
+  pointer-events: none;
+}
+
+/* ── ICON ── */
+.cs-section-icon {
+  width: 58px;
+  height: 58px;
+  background: rgba(80,50,180,0.22);
+  border: 1.5px solid rgba(124,92,252,0.5);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b07fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 28px rgba(124,92,252,0.2);
+}
+.cs-section-icon svg { width: 26px; height: 26px; stroke-width: 1.6; }
+
+/* ── CONTENT ── */
+.cs-section-inner {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+/* Split layout: text left ~45%, image right ~50% */
+.cs-section-inner--split {
+  padding-left: 1.5rem;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.cs-section-left { display: flex; flex-direction: column; }
+
+.cs-section-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+}
+
+.cs-section-text {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--text2);
+  margin-bottom: 0.6rem;
+}
+.cs-section-text:last-child { margin-bottom: 0; }
+
+/* ── TECH STACK ── */
+.cs-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+.cs-tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text2);
+  transition: border-color 0.2s, color 0.2s;
+}
+.cs-tech-item:hover { border-color: var(--border2); color: var(--text); }
+.cs-tech-item img { width: 18px; height: 18px; object-fit: contain; }
+.cs-tech-icon-custom {
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; color: var(--accent2);
+}
+
+/* ── OPERATIONAL FEATURES ── */
+.cs-ops-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.cs-ops-item {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s;
+}
+.cs-ops-item:hover { border-color: var(--border2); }
+.cs-ops-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+.cs-ops-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--text); margin-bottom: 0.2rem;
+}
+.cs-ops-desc { font-size: 0.76rem; color: var(--text2); line-height: 1.55; }
+
+/* ── CHALLENGES ── */
+.cs-challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cs-challenges-list li {
+  font-size: 0.875rem;
+  color: var(--text2);
+  line-height: 1.65;
+  padding-left: 1rem;
+  position: relative;
+}
+.cs-challenges-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent2);
+  top: 0.15rem;
+}
+
+/* ── SOLUTION SCREENSHOT ── */
+.cs-screenshot-frame {
+  background: var(--bg2);
+  border: 1px solid rgba(124,92,252,0.18);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.cs-screenshot-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+.cs-screenshot-frame img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  max-height: 300px;
+}
+
+/* ── RESULTS ── */
+.cs-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.cs-results-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.cs-result-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  margin-top: 0.42rem;
+}
+.cs-results-card {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 8px 40px rgba(124,92,252,0.1);
+}
+.cs-results-label {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.1em; color: var(--text3);
+  text-transform: uppercase; margin-bottom: 0.4rem;
+}
+.cs-results-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.8rem; font-weight: 800;
+  color: var(--accent2); line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.cs-results-sub {
+  font-size: 0.72rem; color: var(--text3); margin-bottom: 1rem;
+}
+.cs-results-chart { height: 70px; }
+.cs-results-chart svg { width: 100%; height: 100%; }
+
+/* ══════════════════════════════════════════════════════════
+   GALLERY
+══════════════════════════════════════════════════════════ */
+.cs-gallery-section {
+  padding: 2.5rem 0 2rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: start;
+}
+.cs-gallery-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.cs-gallery {
+  grid-column: 2 / -1;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+.cs-gallery::-webkit-scrollbar { height: 3px; }
+.cs-gallery::-webkit-scrollbar-track { background: transparent; }
+.cs-gallery::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+.cs-gallery-item {
+  flex-shrink: 0;
+  width: 230px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cs-gallery-item:hover { border-color: var(--border2); transform: translateY(-3px); }
+.cs-gallery-item img {
+  width: 100%; height: 145px;
+  object-fit: cover; object-position: top; display: block;
+}
+.cs-gallery-caption {
+  padding: 0.45rem 0.7rem;
+  font-size: 0.7rem; color: var(--text3);
+  font-weight: 500; letter-spacing: 0.04em;
+}
+.cs-gallery-hint {
+  grid-column: 1 / -1;
+  font-size: 0.7rem; color: var(--text3);
+  margin-top: 0.5rem; text-align: right;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PREV / NEXT NAV
+══════════════════════════════════════════════════════════ */
+.cs-project-nav {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5vw 5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+}
+.cs-nav-item {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.cs-nav-item:hover { opacity: 0.75; }
+.cs-nav-item--next { text-align: right; align-items: flex-end; }
+.cs-nav-label {
+  font-size: 0.7rem; color: var(--text3);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.cs-nav-name {
+  display: flex; align-items: center; gap: 0.35rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem; font-weight: 700; color: var(--text);
+}
+.cs-nav-name svg { width: 14px; height: 14px; color: var(--text3); }
+.cs-nav-center {
+  width: 42px; height: 42px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; display: flex;
+  align-items: center; justify-content: center;
+  color: var(--text3); text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.cs-nav-center svg { width: 16px; height: 16px; }
+.cs-nav-center:hover {
+  background: var(--surface2); border-color: var(--border2); color: var(--text);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .cs-section { grid-template-columns: 70px 1fr; }
+  .cs-section::after { left: 34px; }
+  .cs-section-inner--split { grid-template-columns: 1fr; gap: 2rem; }
+  .cs-gallery-section { grid-template-columns: 70px 1fr; }
+}
+@media (max-width: 600px) {
+  .cs-section { grid-template-columns: 56px 1fr; }
+  .cs-section-icon { width: 44px; height: 44px; }
+  .cs-ops-grid { grid-template-columns: 1fr; }
+  .cs-project-nav { grid-template-columns: 1fr 1fr; }
+  .cs-nav-center { display: none; }
+  .cs-back-wrap { padding-top: 5.5rem; }
+  .cs-hero-title { font-size: 2rem; }
+}
